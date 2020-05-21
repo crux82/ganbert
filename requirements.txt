@@ -1,0 +1,3 @@
+tensorflow-gpu==1.14.0
+git+https://github.com/guillaumegenthial/tf_metrics.git
+gast==0.2.2
