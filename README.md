@@ -2,8 +2,13 @@
 
 Code for the paper "GAN-BERT: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples" accepted for publication at ACL 2020 - short papers by Danilo Croce (Tor Vergata, University of Rome), Giuseppe Castellucci (Amazon) and Roberto Basili (Tor Vergata, University of Rome).
 
+GAN-BERT is an extension of BERT which uses a Generative Adversial setting to implement an effective semi-supervised learning schema. It allows training BERT with datasets composed of a limited amount of labeled examples and larger subsets of unlabeled material. 
+GAN-BERT can be used in sequence classification tasks (also involings text pairs). 
+
 This code runs the GAN-BERT experiment over the TREC dataset for the fine-grained Question Classification task. We provide in this package the code as well as the data for running an experiment by using 2% of the labeled material (109 examples) and 5343 unlabeled examples.
 The test set is composed of 500 annotated examples.
+
+As a result, BERT trained over 109 examples (in a classification task involving 50 classes) achieves an accuracy of ~13% while GAN-BERT achieves an accuracy of ~42%.
 
 ## The GAN-BERT Model
 
@@ -61,7 +66,30 @@ sh run_experiment.sh
 
 The script will first download the BERT-base model, and then it will run the experiments both with GANBERT and with BERT.
 
-After some time (on a Nvidia Tesla V100 it takes about 5 minutes) there will be two files in output: *qc-fine_statistics_BERT0.02.txt* and *qc-fine_statistics_GANBERT0.02.txt*. These two contain the performance measures of BERT and GANBERT, respectively.
+After some time (on a Nvidia Tesla V100 it takes about 5 minutes) there will be two files in output: *qc-fine_statistics_BERT0.02.txt* and *qc-fine_statistics_GANBERT0.02.txt*. These two contain the performance measures of BERT and GANBERT, respectively. 
+
+After training a traditional BERT and GAN-BERT on only 109 labeled examples in a classification task involving 50 classes, the following results are obtained:
+
+**BERT**
+<pre>
+eval\_accuracy = 0.136 
+eval\_f1\_macro = 0.010410878 
+eval\_f1\_micro = 0.136 
+eval\_loss = 3.7638452 
+eval\_precision = 0.136 
+eval\_recall = 0.136 
+</pre>
+
+**GAN-BERT**
+<pre>
+eval\_accuracy = 0.418 
+eval\_f1\_macro = 0.056867357 
+eval\_f1\_micro = 0.418
+eval\_loss = 2.744603 
+eval\_precision = 0.418
+eval\_recall = 0.418
+</pre>
+
 
 ## Out-of-memory issues
 
