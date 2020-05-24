@@ -1,6 +1,6 @@
 # GAN-BERT
 
-Code for the paper "GAN-BERT: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples" accepted for publication at ACL 2020 - short papers by Danilo Croce (Tor Vergata, University of Rome), Giuseppe Castellucci (Amazon) and Roberto Basili (Tor Vergata, University of Rome).
+Code for the paper **"GAN-BERT: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples"** accepted for publication at **ACL 2020 - short papers** by *Danilo Croce* (Tor Vergata, University of Rome), *Giuseppe Castellucci* (Amazon) and *Roberto Basili* (Tor Vergata, University of Rome).
 
 GAN-BERT is an extension of BERT which uses a Generative Adversial setting to implement an effective semi-supervised learning schema. It allows training BERT with datasets composed of a limited amount of labeled examples and larger subsets of unlabeled material. 
 GAN-BERT can be used in sequence classification tasks (also involings text pairs). 
