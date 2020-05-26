@@ -77,8 +77,8 @@ After training a traditional BERT and GAN-BERT on only 109 labeled examples in a
 **BERT**
 <pre>
 eval_accuracy = 0.136 
-eval_f1\_macro = 0.010410878 
-eval_f1\_micro = 0.136 
+eval_f1_macro = 0.010410878 
+eval_f1_micro = 0.136 
 eval_loss = 3.7638452 
 eval_precision = 0.136 
 eval_recall = 0.136 
@@ -87,8 +87,8 @@ eval_recall = 0.136
 **GAN-BERT**
 <pre>
 eval_accuracy = 0.418 
-eval_f1\_macro = 0.056867357 
-eval_f1\_micro = 0.418
+eval_f1_macro = 0.056867357 
+eval_f1_micro = 0.418
 eval_loss = 2.744603 
 eval_precision = 0.418
 eval_recall = 0.418
