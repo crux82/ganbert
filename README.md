@@ -21,6 +21,10 @@ In this context, the model is trained on both labeled and unlabeled examples. Th
 
 The resulting model is demonstrated to learn text classification tasks starting from very few labeled examples (50-60 examples) and to outperform the classifcal BERT fine-tuned models by large margin in this setting.
 
+In the following plots, the performances of GAN-BERT are reported for different tasks at different percentage of labeled examples. We measured the accuracy (or F1) of the model for the following tasks: Topic Classification on the 20News (20N) dataset; Question Classification (QC) on the TREC dataset; Sentiment Analysis on the SST dataset (SST-5); Natural Language Inference over the MNLI dataset (MNLI).
+
+![Performances](https://github.com/crux82/ganbert/raw/master/ganbert_performances.png)
+
 ## Requirements
 
 The code is a modification of the original Tensorflow code for BERT (https://github.com/google-research/bert).
