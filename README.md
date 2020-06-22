@@ -1,6 +1,6 @@
 # GAN-BERT
 
-Code for the paper **"GAN-BERT: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples"** accepted for publication at **ACL 2020 - short papers** by *Danilo Croce* (Tor Vergata, University of Rome), *Giuseppe Castellucci* (Amazon) and *Roberto Basili* (Tor Vergata, University of Rome).
+Code for the paper **GAN-BERT: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples** accepted for publication at **ACL 2020 - short papers** by *Danilo Croce* (Tor Vergata, University of Rome), *Giuseppe Castellucci* (Amazon) and *Roberto Basili* (Tor Vergata, University of Rome). The paper can be found [here](https://www.aclweb.org/anthology/2020.acl-main.191.pdf).
 
 GAN-BERT is an extension of BERT which uses a Generative Adversial setting to implement an effective semi-supervised learning schema. It allows training BERT with datasets composed of a limited amount of labeled examples and larger subsets of unlabeled material. 
 GAN-BERT can be used in sequence classification tasks (also involings text pairs). 
@@ -100,6 +100,26 @@ eval_recall = 0.418
 As the code is based on the original BERT Tensorflow code and that it starts from the BERT-base model, the same batch size and sequence length restrictions apply here based on the GPU that is used to run an experiment.
 
 Please, refer to the BERT github page (https://github.com/google-research/bert#out-of-memory-issues) to find the suggested batch size and sequence length given the amount of GPU memory available.
+
+## Citation
+
+To cite the paper, please use the following:
+
+<pre>
+@inproceedings{croce-etal-2020-gan,
+    title = "{GAN}-{BERT}: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples",
+    author = "Croce, Danilo  and
+      Castellucci, Giuseppe  and
+      Basili, Roberto",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.191",
+    pages = "2114--2119"
+}
+</pre>
 
 
 ## References
