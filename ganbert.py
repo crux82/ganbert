@@ -243,7 +243,7 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
 
 
 def file_based_convert_examples_to_features(
-    labeled_examples, unlabeled_examples, label_list, max_seq_length, tokenizer, output_file, label_mask_rate):
+    labeled_examples, unlabeled_examples, label_list, max_seq_length, tokenizer, output_file, label_mask_rate, is_testing=False):
   """Convert a set of `InputExample`s to a TFRecord file."""
   all_examples = labeled_examples
   if unlabeled_examples:
@@ -288,7 +288,8 @@ def file_based_convert_examples_to_features(
 
   writer = tf.python_io.TFRecordWriter(output_file)
   written_examples = 0
-  random.shuffle(to_write_examples)
+  if not is_testing:
+    random.shuffle(to_write_examples)
   for tf_example in to_write_examples:
     writer.write(tf_example.SerializeToString())
     written_examples = written_examples + 1
@@ -749,7 +750,7 @@ def main(_):
     predict_file = os.path.join(FLAGS.output_dir, "predict.tf_record")
     file_based_convert_examples_to_features(predict_examples, None, label_list,
                                             FLAGS.max_seq_length, tokenizer,
-                                            predict_file, label_mask_rate=label_rate)
+                                            predict_file, label_mask_rate=label_rate, is_testing=True)
 
     tf.logging.info("***** Running prediction*****")
     tf.logging.info("  Num examples = %d (%d actual, %d padding)",
