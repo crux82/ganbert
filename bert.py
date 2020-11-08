@@ -548,7 +548,7 @@ def main(_):
   if task_name not in processors:
     raise ValueError("Task not found: %s" % (task_name))
 
-  processor = processors[task_name]()
+  processor = processors[task_name](bert=True)
 
   label_list = processor.get_labels()
 
