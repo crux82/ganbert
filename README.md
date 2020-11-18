@@ -105,7 +105,7 @@ Please, refer to the BERT github page (https://github.com/google-research/bert#o
 
 To cite the paper, please use the following:
 
-<pre>
+```bibtex
 @inproceedings{croce-etal-2020-gan,
     title = "{GAN}-{BERT}: Generative Adversarial Learning for Robust Text Classification with a Bunch of Labeled Examples",
     author = "Croce, Danilo  and
@@ -119,7 +119,7 @@ To cite the paper, please use the following:
     url = "https://www.aclweb.org/anthology/2020.acl-main.191",
     pages = "2114--2119"
 }
-</pre>
+```
 
 
 ## References
